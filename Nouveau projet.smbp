@@ -3,7 +3,7 @@
   <ProjectVersion>2.9.0.0</ProjectVersion>
   <ManagementLevel>FunctLevelMan20_0</ManagementLevel>
   <Name>Nouveau projet</Name>
-  <FullName>C:\Users\quent\Downloads\Nouveau projet.smbp</FullName>
+  <FullName>C:\Users\quent\Documents\github\Modicon_test\Nouveau projet.smbp</FullName>
   <CurrentCultureName>fr-FR</CurrentCultureName>
   <SoftwareConfiguration>
     <Pous>
@@ -12,10 +12,23 @@
         <SectionNumber>0</SectionNumber>
         <Rungs>
           <RungEntity>
+            <LadderElements />
+            <InstructionLines>
+              <InstructionLineEntity>
+                <InstructionLine>LD</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+            </InstructionLines>
+            <Name />
+            <MainComment />
+            <Label />
+            <IsLadderSelected>true</IsLadderSelected>
+          </RungEntity>
+          <RungEntity>
             <LadderElements>
               <LadderEntity>
                 <ElementType>NormalContact</ElementType>
-                <Descriptor>%I0.0</Descriptor>
+                <Descriptor>%I0.1</Descriptor>
                 <Comment />
                 <Symbol />
                 <Row>0</Row>
@@ -23,8 +36,26 @@
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
               <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%I0.3</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>1</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
+                <ElementType>NormalContact</ElementType>
+                <Descriptor>%I0.5</Descriptor>
+                <Comment />
+                <Symbol />
+                <Row>0</Row>
+                <Column>2</Column>
+                <ChosenConnection>Left, Right</ChosenConnection>
+              </LadderEntity>
+              <LadderEntity>
                 <ElementType>Coil</ElementType>
-                <Descriptor>%Q0.0</Descriptor>
+                <Descriptor>%Q0.5</Descriptor>
                 <Comment />
                 <Symbol />
                 <Row>0</Row>
@@ -73,26 +104,22 @@
                 <Column>3</Column>
                 <ChosenConnection>Left, Right</ChosenConnection>
               </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Row>0</Row>
-                <Column>2</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
-              <LadderEntity>
-                <ElementType>Line</ElementType>
-                <Row>0</Row>
-                <Column>1</Column>
-                <ChosenConnection>Left, Right</ChosenConnection>
-              </LadderEntity>
             </LadderElements>
             <InstructionLines>
               <InstructionLineEntity>
-                <InstructionLine>LD    %I0.0</InstructionLine>
+                <InstructionLine>LD    %I0.1</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
               <InstructionLineEntity>
-                <InstructionLine>ST    %Q0.0</InstructionLine>
+                <InstructionLine>AND   %I0.3</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>AND   %I0.5</InstructionLine>
+                <Comment />
+              </InstructionLineEntity>
+              <InstructionLineEntity>
+                <InstructionLine>ST    %Q0.5</InstructionLine>
                 <Comment />
               </InstructionLineEntity>
             </InstructionLines>
